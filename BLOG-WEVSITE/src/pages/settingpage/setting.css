@@ -1,0 +1,57 @@
+.setting{
+    max-width:  1200px;
+    margin: auto;
+    padding: 20px;
+}
+.settingTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.settingForm{
+    padding-top: 30px;
+}
+
+.settingImg{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.formItem{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+input{
+    font-size: 20px;
+    padding: 8px;
+    background-color: #dfdfdf;
+    color: gray;
+    border: none;
+    cursor:pointer;
+    border-radius: 5px;
+}
+input:focus{
+    outline: none;
+}
+h1 {
+    text-align: right;
+    
+}
+.submit{
+    font-size: 25px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    background: rgb(18, 153, 97);
+    margin-top: 16px;
+    margin-right: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}

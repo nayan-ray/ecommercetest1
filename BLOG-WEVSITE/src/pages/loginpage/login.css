@@ -1,0 +1,45 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../../assets/banner.jpg");
+    background-size: cover;
+    /* backgound-size : 20px 30px/20% 30%; first value indicates width and second hight */
+    background-position: center;
+}
+
+.login{
+    width: 600px;
+    height: 500px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    padding: 0px 15px 15px 15px;
+    font-size: 25px;
+}
+.loginTitele{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.loFormItem{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.loButton{
+    font-size: 25px;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    background-color: rgb(16, 112, 3);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.login h2{
+    text-align: center;
+}

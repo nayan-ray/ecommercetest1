@@ -1,0 +1,11 @@
+.layout{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../../assets/banner.jpg");
+    background-size: cover;
+    /* backgound-size : 20px 30px/20% 30%; first value indicates width and second hight */
+    background-position: center;
+}

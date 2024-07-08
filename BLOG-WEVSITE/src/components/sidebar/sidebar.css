@@ -1,0 +1,27 @@
+.sidebar{
+    flex: 1;
+    font-size: 18px;
+}
+.sidebarListItem img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.sidebarTitle{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+.sidebarListItem p{
+    margin-bottom: 10px;
+    text-align: justify;
+   
+}
+.sidebarList{
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+}
+.sidebarItem{
+    margin-right: 12px;
+    cursor: pointer;
+}

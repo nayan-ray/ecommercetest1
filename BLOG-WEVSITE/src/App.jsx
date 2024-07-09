@@ -11,7 +11,7 @@ import { context, ContextProvider } from './context/authContext/authContext';
 
 const App = () => {
    const {user} = useContext(context);
-   console.log(user);
+  //  console.log(user); 
   return (
     <div>
     <ContextProvider>

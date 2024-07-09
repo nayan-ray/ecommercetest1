@@ -34,6 +34,7 @@ const Reducer = (state, action)=>{
     }
 }
 export const context = createContext(INITIALSSTATE);
+// outside contextProvider function context's defalt value will be applicable;
   export const ContextProvider = ({children})=>{
            const [state , dispatch] = useReducer(Reducer, INITIALSSTATE);
               useEffect(()=>{

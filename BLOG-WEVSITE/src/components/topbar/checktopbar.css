@@ -32,3 +32,16 @@
     font-size: 26px !important;
     cursor: pointer;
 }
+.logout{
+    display: flex;
+    align-items: center;
+}
+.logout-btn{
+    padding: 8px 16px;
+    margin-right: 20px;
+    border: 0;
+    outline: 0;
+    background-color: chocolate;
+    border-radius: 10px;
+    cursor: pointer;
+}

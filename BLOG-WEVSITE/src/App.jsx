@@ -7,17 +7,19 @@ import Setting from  "../src/pages/settingpage/Setting";
 import Home from  "../src/pages/homepage/Home";
 import Login from  "../src/pages/loginpage/Login";
 import Register from  "../src/pages/registerpage/Register";
-import { context, ContextProvider } from './context/authContext/authContext';
+import { context} from './context/authContext/authContext';
 
 const App = () => {
    const {user} = useContext(context);
-  //  console.log(user); 
+   
+  
   return (
     <div>
-    <ContextProvider>
+    
       <BrowserRouter>
         <CheckTopbar user={user} />
         {/* <Outlet /> */}
+        {/* { console.log("app.js" + user)} */}
         <Routes>
             <Route path='/' element={ user ?   <Home /> : <Login />}/>
             <Route path='/:id/single' element={user ?  <Single /> : <Login />}/>
@@ -28,7 +30,7 @@ const App = () => {
             <Route path='*' element={<Write />} />
        </Routes>
       </BrowserRouter>
-    </ContextProvider>  
+    
     </div>
   )
 }

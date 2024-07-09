@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./checktopbar.css"
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import RkI from "../../assets/ramkrisna.webp";
+import { context } from '../../context/authContext/authContext';
 
 const CheckTopbar = ({user}) => {
-  
+    const {dispatch} = useContext(context);
+    const handleclick =()=>{
+        // e.preventDefault();
+        dispatch({type : "logout"})
+    }
   return (
     <div className='topbar'>
        <div className="topLeft">
@@ -26,7 +31,11 @@ const CheckTopbar = ({user}) => {
        </div>
        <div className="topRight">
            {user ? (
-              <img src={RkI} alt="" className="topImg" />
+              <div className="logout">
+                   <button className='logout-btn' onClick={handleclick}>Logout</button>
+                  <img src={RkI} alt="" className="topImg" />
+              </div>
+              
            ) : (
               <ul className="topList">
                   <li className="topListItem">Register</li>

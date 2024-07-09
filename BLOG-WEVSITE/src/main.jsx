@@ -10,13 +10,16 @@ import App from './App.jsx'
 // import Login from "./pages/loginpage/Login.jsx"
 // import Register from "./pages/registerpage/Register.jsx"
 // import FramerMotion from './pages/framer/FramerMotion.jsx'
-// import {context, ContextProvider}  from './context/authContext/authContext.jsx'
+import { ContextProvider}  from './context/authContext/authContext.jsx'
 // const {user} = useContext(context)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <React.StrictMode>
-    <App />
+       <ContextProvider>
+            <App />
+       </ContextProvider>
+    
     {/* <ContextProvider>
        <BrowserRouter>
        

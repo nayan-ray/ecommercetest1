@@ -2,7 +2,8 @@ import { createContext, useEffect, useReducer } from "react"
 
 
 const INITIALSSTATE = {
-    user : JSON.parse(localStorage.getItem("user")) || null,
+    user :  null,
+    //JSON.parse(localStorage.getItem("user")) || 
     isFetching : false,
     isError : false,
 }
@@ -28,6 +29,12 @@ const Reducer = (state, action)=>{
                     isFetching : false,
                     isError : true,
                 };
+              case "logout":
+                return {
+                    user : null,
+                    isFetching : false,
+                    isError : false,
+                };  
     
         default:
           return state;

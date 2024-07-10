@@ -1,0 +1,14 @@
+.filter{
+    width: 100vw;
+    height: calc(100vh - 150px);
+    
+}
+.filter-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    flex-direction: column;
+    gap: 30px;
+}

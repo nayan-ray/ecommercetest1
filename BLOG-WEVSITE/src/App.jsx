@@ -8,16 +8,15 @@ import Home from  "../src/pages/homepage/Home";
 import Login from  "../src/pages/loginpage/Login";
 import Register from  "../src/pages/registerpage/Register";
 import { context} from './context/authContext/authContext';
+import Filter from './pages/filterpage/Filter';
 
 const App = () => {
    const {user} = useContext(context);
-   
-  
   return (
     <div>
     
       <BrowserRouter>
-        <CheckTopbar user={user} />
+         {user && <CheckTopbar user={user} />}
         {/* <Outlet /> */}
         {/* { console.log("app.js" + user)} */}
         <Routes>
@@ -27,6 +26,7 @@ const App = () => {
             <Route path='/setting' element={user ? <Setting /> : <Login />} /> 
             <Route path='/login' element={user ? < Home/>: <Login />}/>
             <Route path='/register' element={user ? < Home/>: <Register />} />
+            <Route path='/filter' element={ user ?   <Filter /> : <Login />}/>
             <Route path='*' element={<Write />} />
        </Routes>
       </BrowserRouter>

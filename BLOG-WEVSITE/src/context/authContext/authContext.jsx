@@ -2,8 +2,7 @@ import { createContext, useEffect, useReducer } from "react"
 
 
 const INITIALSSTATE = {
-    user :  null,
-    //JSON.parse(localStorage.getItem("user")) || 
+    user : JSON.parse(localStorage.getItem("user")) ||  null,
     isFetching : false,
     isError : false,
 }

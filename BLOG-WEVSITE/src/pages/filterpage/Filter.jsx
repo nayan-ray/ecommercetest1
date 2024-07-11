@@ -8,26 +8,13 @@ const Filter = () => {
 
   return (
     <div className="filter">
-      {/* <input
-        className="search"
-        placeholder="Search..."
-        onChange={(e) => setQuery(e.target.value.toLowerCase())}
-      />
-      <ul className="list">
-        {users.filter((asd) =>
-          asd.first_name.toLowerCase().includes(query)
-        ).map((user) => (
-          <li className="listItem" key={user.id}>
-            {user.first_name}
-          </li>
-        ))}
-      </ul> */}
+     
      <div className='filter-wrapper'>
         <input type="text" placeholder='search here' onChange={(e)=>setQuery(e.target.value)}/>
-       {console.log(query)}
-      <ul className='list-filter'>
+        {/* part 1 */}
+      {/* <ul className='list-filter'> 
         {users.filter((user)=>
-         { return user.first_name.toLowerCase().includes(query) 
+         { return user.first_name.toLowerCase().includes(query) || console.log("hello");
         }).map((e)=>{
 
               return <li key={e.id}>{e.first_name}</li>
@@ -40,7 +27,36 @@ const Filter = () => {
                   //at a result, nothing will be displayed inside the element with the map.
 
             })}
-      </ul>
+      </ul> */}
+
+
+      {/* part2 */}
+        <table border={1} style={{borderCollapse : 'collapse'}}>
+          <tbody>
+             <tr>
+                  <th>First Name </th>
+                  <th>Last Name </th>
+                  <th>Email</th>
+                  <th>Gender</th>
+             </tr>
+             {users.filter((user)=>{return user.first_name.toLowerCase().includes(query) 
+             || user.last_name.toLowerCase().includes(query)
+             || user.email.toLowerCase().includes(query)
+             || user.gender.toLowerCase().includes(query)
+
+            }).map((user)=>{
+                 return <tr key={user.id}>
+                             <td> {user.first_name}</td>
+                             <td>{user.last_name}</td>
+                             <td>{user.email}</td>
+                             <td>{user.gender}</td>
+                 </tr>
+             })}
+           </tbody>
+        </table>
+
+
+
     </div>
     </div>
   )

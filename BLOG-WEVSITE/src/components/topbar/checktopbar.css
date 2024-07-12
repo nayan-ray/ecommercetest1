@@ -11,6 +11,7 @@
     -webkit-box-shadow: -2px 2px 14px 12px rgba(186,186,186,1);
    -moz-box-shadow: -2px 2px 14px 12px rgba(186,186,186,1);
     box-shadow: -2px 2px 14px 12px rgba(186,186,186,1);
+    position: relative;
 }
 .topImg{
     width: 45px;
@@ -44,4 +45,22 @@
     background-color: chocolate;
     border-radius: 10px;
     cursor: pointer;
+}
+.modal{
+    width: 350px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 200px;
+   background-color: rgb(173, 173, 173);
+   transition: all 2s linear;
+   z-index: 50;
+}
+.modal ul{
+    list-style: none;
+    padding: 20px;
+}
+.modal ul li{
+    cursor: pointer;
+    margin-bottom: 5px;
 }

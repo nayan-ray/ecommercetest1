@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const port = 3505;
 const authRouter = require("./routers/auths");
 const fakefilter = require("./routers/testFilterroute");
+const postRouter = require("./routers/posts");
 const multer  = require('multer');
 const path = require('node:path'); 
 
@@ -55,7 +56,7 @@ app.get('/', (req, res) => {
 })
 app.use("/api/auth", authRouter);
 app.use("/api/test", fakefilter);
-
+app.use("/api/user/", postRouter)
 
 
 app.listen(port, () => {

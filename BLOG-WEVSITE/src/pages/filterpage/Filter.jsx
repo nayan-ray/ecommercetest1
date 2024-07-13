@@ -1,10 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {users} from "../../components/userDummydata";
-import "./filter.css"
+import "./filter.css";
+import axios from "axios";
 
 const Filter = () => {
  const [query, setQuery] = useState("");
+ const [filter_data, setFilter_data]= useState([]);
  const keys = ["first_name", "last_name", "email" , "gender"];
+ 
+  useEffect(()=>{
+      const filterFunction = async()=>{
+          const response = await axios.get(`http://localhost:3505/api/test/fakefilter?q=${query}`)
+          setFilter_data(response.data);
+      }
+      filterFunction();
+  }, [query])
+
 
   return (
     <div className="filter">
@@ -39,7 +50,8 @@ const Filter = () => {
                   <th>Email</th>
                   <th>Gender</th>
              </tr>
-             {users.filter((user)=>{
+             {filter_data
+            //  .filter((user)=>{
             //  return user.first_name.toLowerCase().includes(query) 
             //  || user.last_name.toLowerCase().includes(query)
             //  || user.email.toLowerCase().includes(query)
@@ -47,9 +59,9 @@ const Filter = () => {
 
              //part-3
 
-              return   keys.some((key)=> user[key].toLowerCase().includes(query))
+            //   return   keys.some((key)=> user[key].toLowerCase().includes(query))
 
-            })
+            // })
             
             .map((user)=>{
                  return <tr key={user.id}>
@@ -60,10 +72,10 @@ const Filter = () => {
                  </tr>
              })}
            </tbody>
-        </table>
 
 
 
+      </table>
     </div>
     </div>
   )

@@ -49,10 +49,12 @@ const CheckTopbar = ({user}) => {
        {toggle &&  <div className="modal">
             <ul className='item-list'>
                 <Link style={{textDecoration : "none", color : "inherit"}} to={'/setting'}>
-                    <li onClick={()=>setToggle(!toggle)} className='item'> setting</li>
+                    <li onClick={()=>setToggle(!toggle)} className='item'> Setting</li>
                 </Link>
-                
-               <li className='item'> setting</li>
+                <Link style={{textDecoration : "none", color : "inherit"}} to={'/filter'}>
+                    <li onClick={()=>setToggle(!toggle)} className='item'> Filter</li>
+                </Link>
+               
            </ul>  
         </div>}
 

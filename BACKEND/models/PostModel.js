@@ -20,7 +20,7 @@ const postSchema = new mongoose.Schema({
      },
      categories : {
         type : Array,
-        default : [],
+        default : ["video", "writing", "gardening"],
      },     
    },{timestamps : true}
 

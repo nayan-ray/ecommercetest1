@@ -6,7 +6,8 @@
 }
 .Img{
     width: 100%;
-    max-height: fit-content;
+    height: auto;
+    object-fit: cover;
 }
 .deleteEdit{
     display: flex;

@@ -28,7 +28,10 @@ const CheckTopbar = ({user}) => {
               <li className="topListItem">Home</li>
               <li className="topListItem">About</li>
               <li className="topListItem">Contact</li>
-              <li className="topListItem">Write</li>
+              
+              <Link style={{textDecoration : "none", color : "inherit"}} to={'/writepost'}>
+                    <li className='topListItem'> Write</li>
+            </Link>
            </ul>
        </div>
        <div className="topRight">

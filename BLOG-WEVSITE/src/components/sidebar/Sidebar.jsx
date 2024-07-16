@@ -6,7 +6,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import rkp from "../../assets/ramkrisna.webp";
 
-const Sidebar = () => {
+const Sidebar = ({post}) => {
+    console.log(post);
   return (
     <div className="sidebar">
       <div className="sidebarListItem">
@@ -22,10 +23,12 @@ const Sidebar = () => {
       <div className="sidebarListItem">
         <span className="sidebarTitle">Categories</span>
         <ul className="sidebarList">
-           <li className="sidebarItem">Food</li>
-           <li className="sidebarItem">Audio</li>
-           <li className="sidebarItem">Music</li>
-           <li className="sidebarItem">Video</li>
+          {/* {post.categories.map((item, i)=>{
+              return <li key={i} className="sidebarItem">{item}</li>
+          })} */}
+           <li className="sidebarItem">video</li>
+           <li className="sidebarItem">writing</li>
+           <li className="sidebarItem">gardening</li>
         </ul>
       </div>
       <div className="sidebarListItem">

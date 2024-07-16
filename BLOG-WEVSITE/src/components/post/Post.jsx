@@ -1,5 +1,6 @@
 import React from "react";
 import "./post.css";
+import {Link} from "react-router-dom"
 
 
 // import pe from "../../assets"
@@ -15,6 +16,7 @@ const Post = ({ post }) => {
   }
   return (
     <div className="post">
+      <Link style={{textDecoration : "none", color : "inherit"}} to={`/${post._id}/single`}>      
       {post.photo && <img src={post.photo} className="pImg" alt="" />}
       <div className="postInfos">
         <div className="postInfo">
@@ -29,7 +31,8 @@ const Post = ({ post }) => {
         </div>
         <p className="description">{trancate(post.desc, 100)}</p>
        
-      </div>
+       </div>
+     </Link>
     </div>
   );
 };

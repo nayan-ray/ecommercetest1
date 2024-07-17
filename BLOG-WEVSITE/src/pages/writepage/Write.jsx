@@ -7,7 +7,7 @@ const Write = () => {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [photo, setPhoto] =useState('');
-  const {user} = useContext(context)
+  const {user} = useContext(context);
 
   const handleSubmit = async(e)=>{
      e.preventDefault();

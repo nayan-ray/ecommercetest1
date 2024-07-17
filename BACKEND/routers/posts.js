@@ -58,8 +58,10 @@ router.get("/:id", async(req, res)=>{
 //delete a post
 router.delete("/:id", async(req, res)=>{
      try {
+        // console.log("hello");
+        // console.log(req.headers['username']);
       const getPost = await Post.findById(req.params.id);
-       if(getPost.username === req.body.username){
+       if(getPost.username === req.headers.username){
           try {
             await Post.findByIdAndDelete(req.params.id);
             res.status(200).json("your post has been deleted");

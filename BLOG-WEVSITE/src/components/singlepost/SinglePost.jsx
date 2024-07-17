@@ -5,11 +5,13 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { context } from "../../context/authContext/authContext";
 // import {useParams} from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SinglePost = ({post}) => {
+  const navigate = useNavigate();
   const {user} = useContext(context);
-  // const [post, setPost] = useState('');
+ 
   //  const {id} = useParams();
   //  //every component can use useParams inside single Page.
   //  useEffect(()=>{
@@ -19,6 +21,27 @@ const SinglePost = ({post}) => {
   //      }
   //     getData();
   //  },[id])
+  const handleDelete= async(e)=>{
+     e.preventDefault();
+    //  const data ={
+    //    username : user.user.username,
+    //  }
+     console.log(post._id);
+     try {
+      const response = await axios.delete(`http://localhost:3505/api/user/${post._id}`, {headers : {'username' : user.user.username}});
+      if(response.statusText === "OK"){
+        console.log(response.data);
+        console.log(user.user.username);
+         navigate("/");
+      }else{
+         alert('something is wrong');
+      }
+        
+     } catch (error) {
+        console.log("hello");
+     }
+      
+  }
 
   return (
     <div className="singlepost">
@@ -29,8 +52,8 @@ const SinglePost = ({post}) => {
           
           {user.user.username === post.username && 
               <div className="editDelete">
-              <EditIcon className="icon edit"/>
-              <DeleteIcon className="icon delete"/>
+                  <EditIcon className="icon edit"/>
+                  <DeleteIcon onClick={handleDelete} className="icon delete" />
             </div>
           }
         </div>
@@ -44,8 +67,7 @@ const SinglePost = ({post}) => {
         <div className="desc">
           <p>
                {post?.desc}
-          </p>
-          
+          </p>         
         </div>
       </div>
     </div>

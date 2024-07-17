@@ -7,7 +7,7 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import rkp from "../../assets/ramkrisna.webp";
 
 const Sidebar = ({post}) => {
-    console.log(post);
+    
   return (
     <div className="sidebar">
       <div className="sidebarListItem">

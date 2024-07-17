@@ -8,8 +8,8 @@ import RkI from "../../assets/ramkrisna.webp";
 import { context } from '../../context/authContext/authContext';
 import { Link } from 'react-router-dom';
 
-const CheckTopbar = ({user}) => {
-    const {dispatch} = useContext(context);
+const CheckTopbar = () => {
+    const {user,dispatch} = useContext(context);
     const [toggle , setToggle] = useState(false);
     const handleclick =()=>{
         // e.preventDefault();
@@ -40,7 +40,7 @@ const CheckTopbar = ({user}) => {
            {user ? (
               <div className="logout">
                    <button className='logout-btn' onClick={handleclick}>Logout</button>
-                  <img onClick={()=>setToggle(!toggle)} src={RkI} alt="" className="topImg" />
+                  <img onClick={()=>setToggle(!toggle)} src={user.user?.photo} alt="" className="topImg" />
               </div>
               
            ) : (

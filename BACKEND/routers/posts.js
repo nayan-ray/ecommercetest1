@@ -81,6 +81,7 @@ router.delete("/:id", async(req, res)=>{
 router.get("/", async(req, res)=>{
     const username = req.query.username;
     const catName = req.query.catName;
+    console.log(username);
     try {
     let posts;
        if(username){

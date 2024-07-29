@@ -6,7 +6,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import { context } from "../../context/authContext/authContext";
 // import {useParams} from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SinglePost = ({post}) => {
   const navigate = useNavigate();
@@ -52,16 +52,21 @@ const SinglePost = ({post}) => {
           
           {user.user.username === post.username && 
               <div className="editDelete">
-                  <EditIcon className="icon edit"/>
+                  <Link style={{textDecoration : "none", color : "inherit"}} to={'/writepost/update'} state={post}>
+                        <EditIcon className="icon edit"/>
+                  </Link>
                   <DeleteIcon onClick={handleDelete} className="icon delete" />
             </div>
           }
         </div>
          
         <div className="userInfo">
-          <span className="userName">
-            Author : <b>{post?.username}</b>
-          </span>
+                   <Link style={{textDecoration : "none", color : "inherit"}} to={`/?username=${post.username}`} state={post}>
+                        <span className="userName">
+                            Author : <b>{post?.username}</b>
+                        </span>
+                  </Link>
+          
           <span className="date">{new Date(post.createdAt).toDateString()}</span>
         </div>
         <div className="desc">

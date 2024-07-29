@@ -6,6 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import rkp from "../../assets/ramkrisna.webp";
 import { context } from "../../context/authContext/authContext";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({post}) => {
     const {user} = useContext(context)
@@ -28,9 +29,16 @@ const Sidebar = ({post}) => {
           {/* {post.categories.map((item, i)=>{
               return <li key={i} className="sidebarItem">{item}</li>
           })} */}
-           <li className="sidebarItem">video</li>
-           <li className="sidebarItem">writing</li>
-           <li className="sidebarItem">gardening</li>
+          <Link style={{textDecoration : "none", color : "inherit"}} to={"/?catName=video"}>
+               <li className="sidebarItem">video</li>
+          </Link>
+          <Link style={{textDecoration : "none", color : "inherit"}} to={"/?catName=writing"}>
+               <li className="sidebarItem">writing</li>
+          </Link>
+          <Link style={{textDecoration : "none", color : "inherit"}} to={"/?catName=gardening"}>
+               <li className="sidebarItem">gardening</li>
+          </Link>
+
         </ul>
       </div>
       <div className="sidebarListItem">

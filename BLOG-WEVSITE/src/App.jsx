@@ -9,6 +9,9 @@ import Login from  "../src/pages/loginpage/Login";
 import Register from  "../src/pages/registerpage/Register";
 import { context} from './context/authContext/authContext';
 import Filter from './pages/filterpage/Filter';
+import Edit from './components/edit/Edit';
+import Error from './pages/errorpage/Error';
+
 
 const App = () => {
    const {user} = useContext(context);
@@ -23,12 +26,13 @@ const App = () => {
             <Route path='/' element={ user ?   <Home /> : <Login />}/>
             <Route path='/:id/single' element={user ?  <Single /> : <Login />}/>
             <Route path='/writepost' element={user ? <Write /> : <Login />}/>
+            <Route path='/writepost/update' element={user ? <Edit /> : <Login />}/>
             <Route path='/setting' element={user ? <Setting /> : <Login />} /> 
             <Route path='/login' element={user ? < Home/>: <Login />}/>
             <Route path='/register' element={user ? < Home/>: <Register />} />
             <Route path='/register/new' element={user ? <Register /> : <Login/>} />
             <Route path='/filter' element={ user ?   <Filter /> : <Login />}/>
-            <Route path='*' element={<Write />} />
+            <Route path='*' element={<Error />} />
        </Routes>
       </BrowserRouter>
     

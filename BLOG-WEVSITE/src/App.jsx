@@ -11,6 +11,7 @@ import { context} from './context/authContext/authContext';
 import Filter from './pages/filterpage/Filter';
 import Edit from './components/edit/Edit';
 import Error from './pages/errorpage/Error';
+import SocialHome from './pages/social/SocialHome';
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
             <Route path='/register' element={user ? < Home/>: <Register />} />
             <Route path='/register/new' element={user ? <Register /> : <Login/>} />
             <Route path='/filter' element={ user ?   <Filter /> : <Login />}/>
+            <Route path='/social/home' element={ user ?   <SocialHome /> : <Login />}/>
             <Route path='*' element={<Error />} />
        </Routes>
       </BrowserRouter>

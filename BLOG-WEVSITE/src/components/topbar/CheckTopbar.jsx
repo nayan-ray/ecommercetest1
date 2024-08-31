@@ -16,7 +16,7 @@ const CheckTopbar = () => {
         dispatch({type : "logout"})
     }
   return (
-    <div className='topbar'>
+    <div className='topbar bg-success'>
        <div className="topLeft">
            <FacebookIcon className='topIcon'/>
            <InstagramIcon className='topIcon'/>

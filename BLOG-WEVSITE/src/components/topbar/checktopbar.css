@@ -8,10 +8,10 @@
     padding: 0 25px;
     font-size: 24px;
     margin: auto;
-    -webkit-box-shadow: -2px 2px 14px 12px rgba(186,186,186,1);
+    /* -webkit-box-shadow: -2px 2px 14px 12px rgba(186,186,186,1);
    -moz-box-shadow: -2px 2px 14px 12px rgba(186,186,186,1);
     box-shadow: -2px 2px 14px 12px rgba(186,186,186,1);
-    position: relative;
+    position: relative; */
 }
 .topImg{
     width: 45px;

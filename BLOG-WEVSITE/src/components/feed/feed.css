@@ -1,0 +1,24 @@
+.user-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.user-details{
+    opacity: 0.7;
+    width: 80%;
+    
+}
+.feed-hr{
+    width: 80%;
+    margin: auto;
+}
+.feed{
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.38);
+}
+.action-item{
+    cursor: pointer;
+}

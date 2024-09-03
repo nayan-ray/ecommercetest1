@@ -10,6 +10,7 @@ import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import EventIcon from '@mui/icons-material/Event';
 import SchoolIcon from '@mui/icons-material/School';
 import ram from "../../../src/assets/ramkrisna.webp";
+import Feed from '../../components/feed/Feed';
 
 const SocialHome = () => {
   return (
@@ -82,10 +83,10 @@ const SocialHome = () => {
                        </ul>
                      </div>
                 </div>
-                <div className="col-5">
-                  feed
+                <div className="col-6">
+                  <Feed />
                 </div>
-                <div className="col-4">
+                <div className="col-3">
                   right
 
                 </div>

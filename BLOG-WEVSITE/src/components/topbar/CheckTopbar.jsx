@@ -4,7 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
-import RkI from "../../assets/ramkrisna.webp";
+// import RkI from "../../assets/ramkrisna.webp";
 import { context } from '../../context/authContext/authContext';
 import { Link } from 'react-router-dom';
 
@@ -51,7 +51,7 @@ const CheckTopbar = () => {
            )}
        </div>
 
-       {toggle &&  <div className="modal">
+       {toggle &&  <div className="modal-topBar">
             <ul className='item-list'>
                 <Link style={{textDecoration : "none", color : "inherit"}} to={'/setting'}>
                     <li onClick={()=>setToggle(!toggle)} className='item'> Setting</li>

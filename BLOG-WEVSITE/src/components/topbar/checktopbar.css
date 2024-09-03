@@ -46,7 +46,7 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.modal{
+.modal-topBar{
     width: 350px;
     position: absolute;
     top: 50px;
@@ -56,11 +56,11 @@
    transition: all 2s linear;
    z-index: 50;
 }
-.modal ul{
+.modal-topBar ul{
     list-style: none;
     padding: 20px;
 }
-.modal ul li{
+.modal-topBar ul li{
     cursor: pointer;
     margin-bottom: 5px;
     color: #6a7d05;
